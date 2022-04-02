@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e93ced20-c405-4f1d-b485-2987f689b173" name="Changes" comment="start project and implement simple menu">
-      <change afterPath="$PROJECT_DIR$/game.py" afterDir="false" />
+    <list default="true" id="e93ced20-c405-4f1d-b485-2987f689b173" name="Changes" comment="re-sorting the code">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game.py" beforeDir="false" afterPath="$PROJECT_DIR$/game.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -77,7 +77,7 @@
       <workItem from="1648909199933" duration="4256000" />
       <workItem from="1648925933605" duration="569000" />
       <workItem from="1648926521127" duration="243000" />
-      <workItem from="1648926776572" duration="10164000" />
+      <workItem from="1648926776572" duration="11871000" />
     </task>
     <task id="LOCAL-00001" summary="start project and implement simple menu">
       <created>1648927020602</created>
@@ -93,7 +93,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648927030484</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="re-sorting the code">
+      <created>1648939661295</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1648939661295</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -112,9 +119,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="start project and implement simple menu" />
-    <option name="LAST_COMMIT_MESSAGE" value="start project and implement simple menu" />
+    <MESSAGE value="re-sorting the code" />
+    <option name="LAST_COMMIT_MESSAGE" value="re-sorting the code" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/battleships$main.coverage" NAME="main Coverage Results" MODIFIED="1648939052447" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/battleships$main.coverage" NAME="main Coverage Results" MODIFIED="1648940837240" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

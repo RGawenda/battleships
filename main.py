@@ -8,7 +8,7 @@ class Main_menu:
         pass
 
     def start_the_multiplayer_game(self):
-
+        game.Game(self.screen)
         pass
 
     def option(self):
@@ -18,7 +18,6 @@ class Main_menu:
         pygame.init()
         self.screen = pygame.display.set_mode((1280, 720))
         self.menu = pygame_menu.Menu('Batlleships', 400, 300, theme=pygame_menu.themes.THEME_DARK)
-
         self.menu.add.button('Singleplayer', self.start_the_singleplayer_game)
         self.menu.add.button('Multiplayer', self.start_the_multiplayer_game)
         self.menu.add.button('Option', self.option)
