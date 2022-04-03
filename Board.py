@@ -1,5 +1,5 @@
 import pygame
-from pygame_menu.examples.other.maze import BLUE, RED
+from pygame_menu.examples.other.maze import BLUE, RED, BLACK
 
 
 class Generate_board:
@@ -8,10 +8,13 @@ class Generate_board:
         while k < 10:
             l = 0
             while l < 10:
-                if(board.get_value(k, l) == 0):
+                o = board.get_value(k, l)
+                if(o == 0 or o == 1):
                     Grid((l*50)+100+l, (k*50)+100+k, screen, BLUE)
-                else:
+                elif(o == 3):
                     Grid((l*50)+100+l, (k*50)+100+k, screen, RED)
+                elif (o == 2):
+                    Grid((l * 50) + 100 + l, (k * 50) + 100 + k, screen, BLACK)
                 l = l + 1
             k = k + 1
         pass
@@ -24,28 +27,16 @@ class Grid:
         self.color_ = color
         pygame.draw.rect(screen, self.color_, (x, y, 50, 50))
 
-    def change(self):
-        self.color_ = RED
-        pass
-
-    def click(self, event):
-        x, y = pygame.mouse.get_pos()
-        if event.type == pygame.MOUSEBUTTONDOWN:
-            if pygame.mouse.get_pressed()[0]:
-                if self.rect.collidepoint(x, y):
-                    self.change()
-        pass
-
 class Game_board:
     def __init__(self):
         self.matrix = [[0, 0, 0, 0, 1, 0, 0, 0, 0, 0],
                        [0, 0, 0, 0, 1, 0, 0, 0, 0, 0],
                        [0, 0, 0, 0, 1, 1, 1, 1, 1, 1],
+                       [0, 1, 0, 0, 0, 0, 0, 0, 0, 0],
+                       [0, 1, 0, 0, 0, 0, 0, 0, 0, 0],
+                       [0, 1, 0, 0, 0, 0, 0, 0, 0, 0],
                        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                       [0, 0, 0, 0, 1, 1, 1, 0, 0, 0],
                        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
                        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
         pass
@@ -54,6 +45,22 @@ class Game_board:
         return self.matrix[x][y]
         pass
 
-    def set_value(self, x, y, z):
-        self.matrix[x][y] = z
+    def increment_value(self, x, y):
+        self.matrix[x][y] = self.matrix[x][y] + 2
+        pass
+
+class Test_click:
+    def __init__(self, board, pos):
+        x, y = pos
+        k = 0
+        while k < 10:
+            l = 0
+            while l < 10:
+                x1 = (l * 50) + 100 + l
+                y1 = (k * 50) + 100 + k
+                if ( x1 < x and x < x1+50 and y1 < y and y < y1+50):
+                    if (board.get_value(k, l) < 2):
+                        board.increment_value(k, l)
+                l = l + 1
+            k = k + 1
         pass
