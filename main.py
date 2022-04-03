@@ -1,6 +1,7 @@
 import game
 import pygame
 import pygame_menu
+import option
 
 class Main_menu:
     def start_the_singleplayer_game(self):
@@ -12,8 +13,9 @@ class Main_menu:
         pass
 
     def option(self):
-
+        option.menu_option(self.screen)
         pass
+
     def __init__(self):
         pygame.init()
         self.screen = pygame.display.set_mode((1280, 720))
@@ -23,6 +25,7 @@ class Main_menu:
         self.menu.add.button('Option', self.option)
         self.menu.add.button('Exit', pygame_menu.events.EXIT)
         k = self.menu.mainloop(self.screen)
+        pass
 
 if __name__ == "__main__":
     Main_menu()
