@@ -1,7 +1,6 @@
 import pygame
 from pygame_menu.examples.other.maze import BLUE, RED, BLACK
 
-
 class Generate_board:
     def __init__(self, screen, board):
         k = 0
