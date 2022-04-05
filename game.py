@@ -9,11 +9,14 @@ class Game:
     def __init__(self, screen):
         screen = pygame.display.set_mode((1280, 720))
         screen.fill((0, 0, 0))
+
         map = board.Game_board()
+
         pygame.display.set_caption('Image')
         image = pygame.image.load(r'background.png')
         image = pygame.transform.scale(image, (1280, 720))
         screen.blit(image, (0, 0))
+
         running = True
 
         while running:
@@ -34,4 +37,5 @@ class Game:
                         board.Test_click(map, mouse_position)
 
             pygame.display.update()
+
         pass

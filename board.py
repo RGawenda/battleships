@@ -3,63 +3,82 @@ from pygame_menu.examples.other.maze import BLUE, RED, BLACK
 
 class Generate_board:
     def __init__(self, screen, board):
-        k = 0
-        while k < 10:
-            l = 0
-            while l < 10:
-                o = board.get_value(k, l)
+        font = pygame.font.SysFont(None, 40)
+
+        for k in range(0, 10):
+            for l in range(0, 10):
+                o = board.get_object(k, l).get_status()
+                screen.blit(font.render(chr(65+l), True, BLACK), (115+(l*50)+l, 70))
+                if(k < 9):
+                    screen.blit(font.render(chr(49 + k), True, BLACK), (70, 115 + (k * 50) + k))
+                else:
+                    screen.blit(font.render('10', True, BLACK), (60, 115 + (k * 50) + k))
+
                 if(o == 0 or o == 1):
-                    Grid((l*50)+100+l, (k*50)+100+k, screen, BLUE)
+                    Draw_grid((board.get_object(k, l).get_x()), (board.get_object(k, l).get_y()), screen, BLUE)
                 elif(o == 3):
-                    Grid((l*50)+100+l, (k*50)+100+k, screen, RED)
+                    Draw_grid((board.get_object(k, l).get_x()), (board.get_object(k, l).get_y()), screen, RED)
                 elif (o == 2):
-                    Grid((l * 50) + 100 + l, (k * 50) + 100 + k, screen, BLACK)
-                l = l + 1
-            k = k + 1
+                    Draw_grid((board.get_object(k, l).get_x()), (board.get_object(k, l).get_y()), screen, BLACK)
         pass
 
-class Grid:
+class Draw_grid:
     def __init__(self, x, y, screen, color):
         self.rect = None
         self.x = x
         self.y = y
         self.color_ = color
         pygame.draw.rect(screen, self.color_, (x, y, 50, 50))
+        pass
+
+class Grid_element:
+    def __init__(self, x, y):
+        self.status = 0
+        self.x = x
+        self.y = y
+        pass
+
+    def get_status(self):
+        return self.status
+        pass
+
+    def get_x(self):
+        return self.x
+        pass
+
+    def get_y(self):
+        return self.y
+        pass
+
+    def change_status(self):
+        self.status = self.status + 2
+        pass
 
 class Game_board:
     def __init__(self):
-        self.matrix = [[0, 0, 0, 0, 1, 0, 0, 0, 0, 0],
-                       [0, 0, 0, 0, 1, 0, 0, 0, 0, 0],
-                       [0, 0, 0, 0, 1, 1, 1, 1, 1, 1],
-                       [0, 1, 0, 0, 0, 0, 0, 0, 0, 0],
-                       [0, 1, 0, 0, 0, 0, 0, 0, 0, 0],
-                       [0, 1, 0, 0, 0, 0, 0, 0, 0, 0],
-                       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                       [0, 0, 0, 0, 1, 1, 1, 0, 0, 0],
-                       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
+        matrix = []
+        for i in range(0, 10):
+            row = []
+            for j in range(0, 10):
+                x1 = (j * 50) + 100 + j
+                y1 = (i * 50) + 100 + i
+                row.append(Grid_element(x1, y1))
+            matrix.append(row)
+        self.matrix = matrix
         pass
 
-    def get_value(self, x, y):
+    def get_object(self, x, y):
         return self.matrix[x][y]
-        pass
-
-    def increment_value(self, x, y):
-        self.matrix[x][y] = self.matrix[x][y] + 2
         pass
 
 class Test_click:
     def __init__(self, board, pos):
         x, y = pos
-        k = 0
-        while k < 10:
-            l = 0
-            while l < 10:
-                x1 = (l * 50) + 100 + l
-                y1 = (k * 50) + 100 + k
+        for k in range(0, 10):
+            for l in range(0, 10):
+                x1 = board.get_object(k, l).get_x()
+                y1 = board.get_object(k, l).get_y()
                 if ( x1 < x and x < x1+50 and y1 < y and y < y1+50):
-                    if (board.get_value(k, l) < 2):
-                        board.increment_value(k, l)
-                l = l + 1
-            k = k + 1
+                    if (board.get_object(k, l).get_status() < 2):
+                        board.get_object(k, l).change_status()
         pass
