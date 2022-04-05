@@ -1,9 +1,7 @@
 import sys
-
 import pygame
 import pygame_menu
 from pygame import KEYDOWN, K_ESCAPE, QUIT
-
 
 class menu_option:
     def __init__(self, screen):

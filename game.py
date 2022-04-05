@@ -3,6 +3,7 @@ import pygame
 import board
 from pygame import KEYDOWN, K_ESCAPE, QUIT
 
+import show_grid
 
 
 class Game:
@@ -21,7 +22,7 @@ class Game:
 
         while running:
 
-            board.Generate_board(screen, map)
+            show_grid.Generate_board(screen, map)
 
             for event in pygame.event.get():
                 if event.type == QUIT:
