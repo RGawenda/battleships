@@ -25,7 +25,7 @@ class Main_menu:
         self.menu.add.button('Option', self.option)
         self.menu.add.button('Exit', pygame_menu.events.EXIT)
 
-        k = self.menu.mainloop(self.screen)
+        self.menu.mainloop(self.screen)
         pass
 
 if __name__ == "__main__":

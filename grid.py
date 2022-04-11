@@ -22,7 +22,7 @@ class Grid_element:
         self.status = self.status + 2
         pass
 
-class Game_board:
+class Grid_structure:
     def __init__(self):
         matrix = []
         for i in range(0, 10):

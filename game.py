@@ -1,6 +1,6 @@
 import sys
 import pygame
-import board
+import grid
 from pygame import KEYDOWN, K_ESCAPE, QUIT
 
 import show_grid
@@ -11,7 +11,7 @@ class Game:
         screen = pygame.display.set_mode((1280, 720))
         screen.fill((0, 0, 0))
 
-        map = board.Game_board()
+        map = grid.Grid_structure()
 
         pygame.display.set_caption('Image')
         image = pygame.image.load(r'background.png')
@@ -21,9 +21,7 @@ class Game:
         running = True
 
         while running:
-
             show_grid.Generate_board(screen, map)
-
             for event in pygame.event.get():
                 if event.type == QUIT:
                     pygame.quit()
@@ -35,8 +33,6 @@ class Game:
                 if event.type == pygame.MOUSEBUTTONDOWN:
                     if event.button ==1:
                         mouse_position = pygame.mouse.get_pos()
-                        board.Test_click(map, mouse_position)
-
+                        grid.Test_click(map, mouse_position)
             pygame.display.update()
-
         pass
