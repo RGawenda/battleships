@@ -3,12 +3,14 @@ from pygame_menu.examples.other.maze import BLACK, BLUE, RED
 
 
 class Generate_board:
-    def __init__(self, screen, board):
+    def __init__(self, screen, board, player):
         font = pygame.font.SysFont(None, 40)
 
         for k in range(0, 10):
             for l in range(0, 10):
                 o = board.get_object(k, l).get_status()
+                if(player):
+                    o = o+2
                 screen.blit(font.render(chr(65+l), True, BLACK), (115+(l*50)+l, 70))
                 if(k < 9):
                     screen.blit(font.render(chr(49 + k), True, BLACK), (70, 115 + (k * 50) + k))

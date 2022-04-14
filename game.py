@@ -3,6 +3,7 @@ import pygame
 import grid
 from pygame import KEYDOWN, K_ESCAPE, QUIT
 
+import set_ships
 import show_grid
 
 
@@ -18,10 +19,12 @@ class Game:
         image = pygame.transform.scale(image, (1280, 720))
         screen.blit(image, (0, 0))
 
+        set_ships.Set_ships(screen, map, image)
+
         running = True
 
         while running:
-            show_grid.Generate_board(screen, map)
+            show_grid.Generate_board(screen, map, True)
             for event in pygame.event.get():
                 if event.type == QUIT:
                     pygame.quit()
