@@ -3,7 +3,8 @@ import pygame
 import pygame_menu
 from pygame import KEYDOWN, K_ESCAPE, QUIT
 
-class menu_option:
+
+class Menu_option:
     def __init__(self, screen):
         screen.fill((0, 0, 0))
 

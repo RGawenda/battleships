@@ -1,4 +1,5 @@
 
+
 class Grid_element:
     def __init__(self, x, y):
         self.status = 0
@@ -22,6 +23,7 @@ class Grid_element:
         self.status = self.status + 2
         pass
 
+
 class Grid_structure:
     def __init__(self):
         matrix = []
@@ -39,6 +41,7 @@ class Grid_structure:
         return self.matrix[x][y]
         pass
 
+
 class Test_click:
     def __init__(self, board, pos):
         x, y = pos
@@ -46,7 +49,7 @@ class Test_click:
             for l in range(0, 10):
                 x1 = board.get_object(k, l).get_x()
                 y1 = board.get_object(k, l).get_y()
-                if x1 < x < x1+50 and y1 < y < y1 + 50:
+                if x1 < x < x1 + 50 and y1 < y < y1 + 50:
                     if board.get_object(k, l).get_status() < 2:
                         board.get_object(k, l).change_status()
         pass

@@ -1,23 +1,21 @@
-import game
 import pygame
 import pygame_menu
-
+import singleplayer
 import multiplayer
 import option
-import singleplayer
 
 
 class Main_menu:
     def start_the_singleplayer_game(self):
-        singleplayer.singleplayer_mode(self.screen)
+        singleplayer.Singleplayer_mode(self.screen)
         pass
 
     def start_the_multiplayer_game(self):
-        multiplayer.multiplayer_mode(self.screen)
+        multiplayer.Multiplayer_mode(self.screen)
         pass
 
     def option(self):
-        option.menu_option(self.screen)
+        option.Menu_option(self.screen)
         pass
 
     def __init__(self):
@@ -30,6 +28,7 @@ class Main_menu:
         self.menu.add.button('Exit', pygame_menu.events.EXIT)
         self.menu.mainloop(self.screen)
         pass
+
 
 if __name__ == "__main__":
     Main_menu()

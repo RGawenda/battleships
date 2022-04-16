@@ -11,22 +11,24 @@ class Game:
     def __init__(self, screen, game_mode):
         self.screen = screen
         self.game_mode = game_mode
+
         self.screen = pygame.display.set_mode((1280, 720))
+
         self.screen.fill((0, 0, 0))
 
-        map = grid.Grid_structure()
+        grid_of_game = grid.Grid_structure()
 
-        pygame.display.set_caption('Image')
+        pygame.display.set_caption('Battleships')
         image = pygame.image.load(r'background.png')
         image = pygame.transform.scale(image, (1280, 720))
         self.screen.blit(image, (0, 0))
 
-        set_ships.Set_ships(self.screen, map, image)
+        set_ships.Set_ships(self.screen, grid_of_game, image)
 
         running = True
 
         while running:
-            show_grid.Generate_board(screen, map, True)
+            show_grid.Generate_board(screen, grid_of_game, True, False)
             for event in pygame.event.get():
                 if event.type == QUIT:
                     pygame.quit()
@@ -36,8 +38,8 @@ class Game:
                         running = False
                         screen = pygame.display.set_mode((400, 300))
                 if event.type == pygame.MOUSEBUTTONDOWN:
-                    if event.button ==1:
+                    if event.button == 1:
                         mouse_position = pygame.mouse.get_pos()
-                        grid.Test_click(map, mouse_position)
+                        grid.Test_click(grid_of_game, mouse_position)
             pygame.display.update()
         pass

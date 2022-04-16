@@ -5,7 +5,7 @@ from pygame_menu.examples.other.maze import BLUE
 import game
 
 
-class select_mode:
+class Select_mode:
     def __init__(self, screen):
         self.screen = screen
         self.mode = 0
@@ -46,9 +46,9 @@ class select_mode:
         pass
 
 
-class multiplayer_mode:
+class Multiplayer_mode:
     def __init__(self, screen):
-        self.mode = select_mode(screen)
+        self.mode = Select_mode(screen)
         if self.mode.mode > 0:
             game.Game(screen, self.mode)
         pass
