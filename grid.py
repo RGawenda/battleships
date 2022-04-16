@@ -46,7 +46,7 @@ class Test_click:
             for l in range(0, 10):
                 x1 = board.get_object(k, l).get_x()
                 y1 = board.get_object(k, l).get_y()
-                if ( x1 < x and x < x1+50 and y1 < y and y < y1+50):
-                    if (board.get_object(k, l).get_status() < 2):
+                if x1 < x < x1+50 and y1 < y < y1 + 50:
+                    if board.get_object(k, l).get_status() < 2:
                         board.get_object(k, l).change_status()
         pass

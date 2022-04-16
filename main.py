@@ -1,15 +1,19 @@
 import game
 import pygame
 import pygame_menu
+
+import multiplayer
 import option
+import singleplayer
+
 
 class Main_menu:
     def start_the_singleplayer_game(self):
-        game.Game(self.screen)
+        singleplayer.singleplayer_mode(self.screen)
         pass
 
     def start_the_multiplayer_game(self):
-        game.Game(self.screen)
+        multiplayer.multiplayer_mode(self.screen)
         pass
 
     def option(self):
@@ -24,7 +28,6 @@ class Main_menu:
         self.menu.add.button('Multiplayer', self.start_the_multiplayer_game)
         self.menu.add.button('Option', self.option)
         self.menu.add.button('Exit', pygame_menu.events.EXIT)
-
         self.menu.mainloop(self.screen)
         pass
 

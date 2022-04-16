@@ -10,8 +10,8 @@ class Generate_board:
             for l in range(0, 10):
                 o = board.get_object(k, l).get_status()
                 if(player):
-                    o = o+2
-                screen.blit(font.render(chr(65+l), True, BLACK), (115+(l*50)+l, 70))
+                    o = o + 2
+                screen.blit(font.render(chr(65+l), True, BLACK), (115 + (l * 50) + l, 70))
                 if(k < 9):
                     screen.blit(font.render(chr(49 + k), True, BLACK), (70, 115 + (k * 50) + k))
                 else:
@@ -30,6 +30,6 @@ class Draw_grid:
         self.rect = None
         self.x = x
         self.y = y
-        self.color_ = color
-        pygame.draw.rect(screen, self.color_, (x, y, 50, 50))
+        self.color = color
+        pygame.draw.rect(screen, self.color, (x, y, 50, 50))
         pass

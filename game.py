@@ -8,18 +8,20 @@ import show_grid
 
 
 class Game:
-    def __init__(self, screen):
-        screen = pygame.display.set_mode((1280, 720))
-        screen.fill((0, 0, 0))
+    def __init__(self, screen, game_mode):
+        self.screen = screen
+        self.game_mode = game_mode
+        self.screen = pygame.display.set_mode((1280, 720))
+        self.screen.fill((0, 0, 0))
 
         map = grid.Grid_structure()
 
         pygame.display.set_caption('Image')
         image = pygame.image.load(r'background.png')
         image = pygame.transform.scale(image, (1280, 720))
-        screen.blit(image, (0, 0))
+        self.screen.blit(image, (0, 0))
 
-        set_ships.Set_ships(screen, map, image)
+        set_ships.Set_ships(self.screen, map, image)
 
         running = True
 
