@@ -28,6 +28,13 @@ class Ship:
         self.y = y
         pass
 
+    def set_direction(self, direction):
+        self.direction = direction
+        pass
+
+    def get_direction(self):
+        return self.direction
+        pass
 
 class Carrier(Ship):
     def __init__(self, x, y, direction):

@@ -16,9 +16,15 @@ class Show_ship:
 
         pass
 
-
-class Show_ships:
+class Show_set_ships_text:
     def __init__(self, screen):
         font = pygame.font.SysFont(None, 30)
         screen.blit(font.render('Setting ships', True, BLACK), (550, 20))
         pass
+
+class Show_ships:
+    def __init__(self, screen, ships):
+        for a in range(0, len(ships)):
+            Show_ship(screen, ships[a])
+        pass
+
