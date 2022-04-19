@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e93ced20-c405-4f1d-b485-2987f689b173" name="Changes" comment="add show ships and set ships">
-      <change afterPath="$PROJECT_DIR$/move_ship.py" afterDir="false" />
+    <list default="true" id="e93ced20-c405-4f1d-b485-2987f689b173" name="Changes" comment="add ships in setting ships window and add ships rotation and move">
+      <change afterPath="$PROJECT_DIR$/ship_collision.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/move_ship.py" beforeDir="false" afterPath="$PROJECT_DIR$/move_ship.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/set_ships.py" beforeDir="false" afterPath="$PROJECT_DIR$/set_ships.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ships.py" beforeDir="false" afterPath="$PROJECT_DIR$/ships.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/show_ships.py" beforeDir="false" afterPath="$PROJECT_DIR$/show_ships.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -94,7 +94,7 @@
       <workItem from="1649066875611" duration="187000" />
       <workItem from="1649068366277" duration="1415000" />
       <workItem from="1650111429857" duration="26551000" />
-      <workItem from="1650204859344" duration="16364000" />
+      <workItem from="1650204859344" duration="31687000" />
     </task>
     <task id="LOCAL-00001" summary="start project and implement simple menu">
       <created>1648927020602</created>
@@ -152,7 +152,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650149634794</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="add ships in setting ships window and add ships rotation and move">
+      <created>1650279121553</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1650279121553</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -188,9 +195,10 @@
     <MESSAGE value="add board" />
     <MESSAGE value="add multiplayer mode" />
     <MESSAGE value="add show ships and set ships" />
-    <option name="LAST_COMMIT_MESSAGE" value="add show ships and set ships" />
+    <MESSAGE value="add ships in setting ships window and add ships rotation and move" />
+    <option name="LAST_COMMIT_MESSAGE" value="add ships in setting ships window and add ships rotation and move" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/battleships$main.coverage" NAME="main Coverage Results" MODIFIED="1650278364289" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/battleships$main.coverage" NAME="main Coverage Results" MODIFIED="1650406538974" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
