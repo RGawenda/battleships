@@ -1,19 +1,21 @@
 import sys
+
 import pygame
-import pygame_menu
-from pygame import KEYDOWN, K_ESCAPE, QUIT
+from pygame import QUIT, KEYDOWN, K_ESCAPE
+from pygame_menu.examples.other.maze import RED
 
 
-class Menu_option:
-    def __init__(self, screen):
+class Show_winner:
+    def __init__(self, screen, win):
+        font = pygame.font.SysFont(None, 30)
         screen.fill((0, 0, 0))
-
-        self.screen = pygame.display.set_mode((1280, 720))
-        self.menu_option = pygame_menu.Menu('Option', 400, 300, theme=pygame_menu.themes.THEME_DARK)
-        self.menu_option.add.button('Back', )
-
         running = True
         while running:
+            if win == 1:
+                screen.blit(font.render('You Won', True, RED), (550, 300))
+            else:
+                screen.blit(font.render('Defeat', True, RED), (550, 300))
+
             for event in pygame.event.get():
                 if event.type == QUIT:
                     pygame.quit()

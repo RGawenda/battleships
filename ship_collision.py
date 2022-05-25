@@ -14,10 +14,8 @@ class Ship_collision:
                     if ships[a].y < y < ships[a].y + 50:
                         self.number_of_ship = a
                         self.selected = True
-                        pass
             else:
                 if ships[a].y < y < ships[a].y + ships[a].get_long() * 50 + ships[a].get_long():
                     if ships[a].x < x < ships[a].x + 50:
                         self.number_of_ship = a
                         self.selected = True
-                        pass

@@ -2,7 +2,6 @@ import sys
 import pygame
 from pygame import QUIT
 from pygame_menu.examples.other.maze import BLUE
-import game
 
 
 class Select_mode:
@@ -43,12 +42,3 @@ class Select_mode:
                             running = False
                             pass
             pygame.display.update()
-        pass
-
-
-class Multiplayer_mode:
-    def __init__(self, screen):
-        self.mode = Select_mode(screen)
-        if self.mode.mode > 0:
-            game.Game(screen, self.mode)
-        pass
