@@ -15,18 +15,16 @@ class Change_ship_position:
 class Change_ship_orientation:
     def check_grid_long(self, ship, k, l):
         if ship.direction:
-            if k + ship.get_long() > 10:
+            if l + ship.get_long() > 10:
                 return False
         else:
-            if l + ship.get_long() > 10:
+            if k + ship.get_long() > 10:
                 return False
         return True
 
     def check_ship_colision(self, ships, number, ship_on_the_grid, grid):
         for b in range(1, ships[number].get_long()):
             if ships[number].direction:
-                print('x:', ship_on_the_grid[number][1])
-                print('y:', ship_on_the_grid[number][2] + b)
                 if grid.get_object(ship_on_the_grid[number][1], ship_on_the_grid[number][2] + b).get_status() == 1:
                     return False
             else:

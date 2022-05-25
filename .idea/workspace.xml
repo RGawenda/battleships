@@ -1,25 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e93ced20-c405-4f1d-b485-2987f689b173" name="Changes" comment="add set_ships.py">
-      <change afterPath="$PROJECT_DIR$/bot.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/grid_operations.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/win.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/battleships.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/battleships.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="e93ced20-c405-4f1d-b485-2987f689b173" name="Changes" comment="add game and win window">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game.py" beforeDir="false" afterPath="$PROJECT_DIR$/game.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grid.py" beforeDir="false" afterPath="$PROJECT_DIR$/grid.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/move_ship.py" beforeDir="false" afterPath="$PROJECT_DIR$/move_ship.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/multiplayer.py" beforeDir="false" afterPath="$PROJECT_DIR$/multiplayer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/option.py" beforeDir="false" afterPath="$PROJECT_DIR$/option.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/set_ships.py" beforeDir="false" afterPath="$PROJECT_DIR$/set_ships.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ship_collision.py" beforeDir="false" afterPath="$PROJECT_DIR$/ship_collision.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ships.py" beforeDir="false" afterPath="$PROJECT_DIR$/ships.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/show_grid.py" beforeDir="false" afterPath="$PROJECT_DIR$/show_grid.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/show_ships.py" beforeDir="false" afterPath="$PROJECT_DIR$/show_ships.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/singleplayer.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +108,7 @@
       <workItem from="1653266591161" duration="47000" />
       <workItem from="1653315547343" duration="869000" />
       <workItem from="1653408889460" duration="22464000" />
-      <workItem from="1653460429993" duration="3856000" />
+      <workItem from="1653460429993" duration="4583000" />
     </task>
     <task id="LOCAL-00001" summary="start project and implement simple menu">
       <created>1648927020602</created>
@@ -196,7 +180,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649700803860</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="add game and win window">
+      <created>1653464586051</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1653464586051</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -234,9 +225,10 @@
     <MESSAGE value="changing the main structure from matrix of int to matrix of objects" />
     <MESSAGE value="add show_grid file" />
     <MESSAGE value="small changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="small changes" />
+    <MESSAGE value="add game and win window" />
+    <option name="LAST_COMMIT_MESSAGE" value="add game and win window" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/battleships$main.coverage" NAME="main Coverage Results" MODIFIED="1653463376043" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/battleships$main.coverage" NAME="main Coverage Results" MODIFIED="1653465253054" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
