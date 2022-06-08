@@ -2,8 +2,8 @@ import pygame
 from pygame_menu.examples.other.maze import BLACK, BLUE, RED, GREY
 
 
-class Generate_board:
-    def __init__(self, screen, board, player, pos2):
+class GenerateBoard:
+    def __init__(self, screen, board, owner, pos2):
         font = pygame.font.SysFont(None, 40)
         pos = 0
         if pos2:
@@ -18,27 +18,27 @@ class Generate_board:
                 else:
                     screen.blit(font.render('10', True, BLACK), (60 + pos, 115 + (k * 50) + k))
 
-                if player:
+                if owner:
                     if o == 0:
                         color = BLUE
                     elif o == 1:
                         color = GREY
                     elif o == 3:
                         color = RED
-                    elif o == 2:
+                    else:
                         color = BLACK
                 else:
                     if o == 0 or o == 1:
                         color = BLUE
                     elif o == 3:
                         color = RED
-                    elif o == 2:
+                    else:
                         color = BLACK
 
-                Draw_grid((board.get_object(k, l).get_x() + pos), (board.get_object(k, l).get_y()), screen, color)
+                DrawGrid((board.get_object(k, l).get_x() + pos), (board.get_object(k, l).get_y()), screen, color)
 
 
-class Draw_grid:
+class DrawGrid:
     def __init__(self, x, y, screen, color):
         self.rect = None
         self.x = x

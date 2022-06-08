@@ -3,7 +3,7 @@ import random
 import pygame
 
 
-class Change_ship_position:
+class ChangeShipPosition:
     def __init__(self, ship):
         mouse_position = pygame.mouse.get_pos()
         x, y = mouse_position
@@ -12,7 +12,7 @@ class Change_ship_position:
         ship.set_y(y - 25)
 
 
-class Change_ship_orientation:
+class ChangeShipOrientation:
     def check_grid_long(self, ship, k, l):
         if ship.direction:
             if l + ship.get_long() > 10:

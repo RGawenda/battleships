@@ -2,7 +2,7 @@ import pygame
 from pygame_menu.examples.other.maze import BLACK, RED, WHITE
 
 
-class Show_ship:
+class ShowShip:
     def __init__(self, screen, ship, selected):
         self.ship = ship
         x1 = 0
@@ -16,7 +16,8 @@ class Show_ship:
                 pygame.draw.rect(screen, WHITE, (self.ship.x + x1 - 3, self.ship.y + y1 - 3, 56, 56))
             pygame.draw.rect(screen, RED, (self.ship.x + x1, self.ship.y + y1, 50, 50))
 
-class Show_set_ships_text:
+
+class ShowSetShipsText:
     def __init__(self, screen):
         font = pygame.font.SysFont(None, 30)
         screen.blit(font.render('Ship placement', True, BLACK), (550, 20))
@@ -26,14 +27,14 @@ class Show_set_ships_text:
         pygame.draw.rect(screen, RED, (875, 590, 100, 50))
         screen.blit(font.render('Random', True, BLACK), (885, 600))
 
-class Show_ships:
+
+class ShowShips:
     def __init__(self, screen, ships, selected_ship, selected):
         for a in range(0, len(ships)):
             if selected:
                 if a == selected_ship:
-                    Show_ship(screen, ships[a], True)
+                    ShowShip(screen, ships[a], True)
                 else:
-                    Show_ship(screen, ships[a], False)
+                    ShowShip(screen, ships[a], False)
             else:
-                Show_ship(screen, ships[a], False)
-
+                ShowShip(screen, ships[a], False)

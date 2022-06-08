@@ -54,7 +54,7 @@ class Submarine(Ship):
         super().__init__(x, y, long, direction)
 
 
-class Patrol_Boat(Ship):
+class PatrolBoat(Ship):
     def __init__(self, x, y, direction):
         long = 2
         super().__init__(x, y, long, direction)

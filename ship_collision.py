@@ -1,7 +1,7 @@
 import pygame
 
 
-class Ship_collision:
+class ShipCollision:
     def __init__(self, ships):
         self.number_of_ship = 0
         self.selected = False

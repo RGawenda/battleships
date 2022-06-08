@@ -1,6 +1,6 @@
 
 
-class Get_grid:
+class GetGrid:
     def __init__(self, grid_game):
         self.grid = grid_game
         self.x2 = 0
